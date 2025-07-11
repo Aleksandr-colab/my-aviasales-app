@@ -1,70 +1,15 @@
-# React + TypeScript + Vite
+# Aviasales App #4 - Завершение
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Мой проект](пшhttps://my-aviasales-g337spl5t-aleksandrs-projects-f31d4829.vercel.app/)
 
-Currently, two official plugins are available:
+В случае проблем с оригинальным апи - можете использовать наш аналог https://aviasales-test-api.kata.academy/search
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Настройте получение полного набора данных (порядка десяти тысяч билетов) и обработку ошибок. Убедитесь, что key в рендере выбран правильно.
+Настройте работу фильтров и сортировки
+Добавьте лоадер, по которому будет видно, что не все данные еще загружены. При этом до завершения получения данных уже можно видеть и работать с неполным набором (см пример на сайте aviasales).
+Проверьте приложение на отсутствие ошибок линтера, ошибок в консоли и приведите код в порядок.
+Заливайте приложение на Vercel (now.sh). Ссылку разместите в readme.
+Особенности работы фильтров:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# my-aviasales-app
+Количество пересадок - это точное количество пересадок в одну из сторон.
+Если по результатам фильтрации нет рейсов (например, ни одна галочка не выбрана) - должно быть сообщение "Рейсов, подходящих под заданные фильтры, не найдено"
