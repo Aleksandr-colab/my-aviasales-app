@@ -1,6 +1,6 @@
 # Aviasales App #4 - Завершение
 
-[Мой проект](пшhttps://my-aviasales-g337spl5t-aleksandrs-projects-f31d4829.vercel.app/)
+[Мой проект](https://my-aviasales-g337spl5t-aleksandrs-projects-f31d4829.vercel.app/)
 
 В случае проблем с оригинальным апи - можете использовать наш аналог https://aviasales-test-api.kata.academy/search
 
